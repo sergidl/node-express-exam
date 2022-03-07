@@ -8,4 +8,3 @@ const host = process.env.HOST;
 
 console.log(`Your port is ${port}`);
 app.listen(port,()=>console.log(`Server is running on http://${host}:${port}`));
-
