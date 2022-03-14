@@ -1,15 +1,15 @@
-GET http://localhost:2/actor
+GET http://localhost:3000/actor
 ####
-GET http://localhost:2/movies/2
+GET http://localhost:3000/movies/2
 ####
-GET http://localhost:2/movies/20
+GET http://localhost:3000/movies/20
 ####
-DELETE  http://localhost:2/movies/2
+DELETE  http://localhost:3000/movies/2
 ###
-GET http://localhost:2/movies/
+GET http://localhost:3000/movies/
 
 ######
-PUT http://localhost:2/movies/update
+PUT http://localhost:3000/movies/update
 Content-Type: application/json
 
 {
@@ -31,7 +31,7 @@ Content-Type: application/json
 }
 
 ######
-POST http://localhost:2/movies/search
+POST http://localhost:3000/movies/search
 Content-Type: application/json
 
 { 
@@ -40,15 +40,15 @@ Content-Type: application/json
 }
 
 ####
-POST http://localhost:2/movies/searchActor
+POST http://localhost:3000/movies/searchActor
 Content-Type: application/json
 
 { 
-  "value": "Tim Robbins"
+  "value": "Robert Duvall"
 }
 
 ######
-PUT http://localhost:2/movies/add
+PUT http://localhost:3000/movies/add
 Content-Type: application/json
 
 {
@@ -68,7 +68,7 @@ Content-Type: application/json
 }
 
 ######
-PUT http://localhost:2/movies/addActor
+PUT http://localhost:3000/movies/addActor
 Content-Type: application/json
 
 {

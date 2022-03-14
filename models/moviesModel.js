@@ -9,7 +9,7 @@ class MoviesModel {
 
     getMovies() {
 
-        console.log("---> moviesModel::getMovies");
+        console.log("---> EX:moviesModel::getMovies");
 
         const movies = movie.getMovies();
         movies.forEach(element => {
@@ -21,7 +21,7 @@ class MoviesModel {
     }
     getMovieById(id) {
 
-        console.log(`---> moviesModel::getMovieById = ${id}`);
+        console.log(`---> EX:moviesModel::getMovieById = ${id}`);
 
         const _movie = movie.getMovieById(id);
         if (typeof _movie == 'undefined')
@@ -33,7 +33,7 @@ class MoviesModel {
 
     removeMovie(id) {
 
-        console.log(`---> moviesModel::removeMovie = ${id}`);
+        console.log(`---> EX:moviesModel::removeMovie = ${id}`);
 
         const index = movie.removeMovie(id);
         if (index != -1) { actor.removeActors(id) }
@@ -42,7 +42,7 @@ class MoviesModel {
 
 
     getMovieBy(elem) {
-        console.log(`---> moviesModel::getMovieBy = ${elem.value}`);
+        console.log(`---> EX:moviesModel::getMovieBy = ${elem.value}`);
 
 
         const _movies = movie.getMovieBy(elem);
@@ -57,7 +57,7 @@ class MoviesModel {
 
     createMovie(req) {
 
-        console.log(`---> moviesModel::createMovie = ${req.id}`);
+        console.log(`---> EX:moviesModel::createMovie = ${req.id}`);
 
         const new_movie = moviePojo(req);
         if (typeof new_movie == 'undefined')
@@ -72,7 +72,7 @@ class MoviesModel {
     }
 
     updateMovie(req) {
-        console.log(`---> moviesModel::updateMovie = ${req.id}`);
+        console.log(`---> EX:moviesModel::updateMovie = ${req.id}`);
 
         const new_movie = moviePojo(req);
         if (typeof new_movie == 'undefined')
@@ -94,7 +94,7 @@ class MoviesModel {
     }
 
     getMoviesFromActor(req) {
-        console.log(`---> moviesModel::getMoviesFromActor = ${req.id}`);
+        console.log(`---> EX:moviesModel::getMoviesFromActor = ${req.id}`);
 
         let _movies = [];
 
@@ -107,7 +107,7 @@ class MoviesModel {
     }
 
     addActors(req) {
-        console.log(`---> moviesModel::addActors = ${req.id}`);
+        console.log(`---> EX:moviesModel::addActors = ${req.id}`);
 
         actor.addActorToMovie(req)
         return this.getMovieById(req.id);

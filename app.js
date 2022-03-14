@@ -8,7 +8,7 @@ const app=express();
 app.use(express.json());
 
 app.use((req,res,next)=>{
-    console.log('---->app.js');
+    console.log('---->EX:app.js');
     next();
 });
 

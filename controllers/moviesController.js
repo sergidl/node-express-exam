@@ -3,7 +3,7 @@ import moviesModel from '../models/moviesModel.js';
 
 const getAllMovies = (req, res) => {
 
-    console.log("---> moviesController::getAllMovies");
+    console.log("---> EX:moviesController::getAllMovies");
 
     const movies = moviesModel.getMovies();
     res.json(movies);
@@ -11,7 +11,7 @@ const getAllMovies = (req, res) => {
 
 const getMovieById = (req, res, next) => {
 
-    console.log("---> moviesController::getMovieById");
+    console.log("---> EX:moviesController::getMovieById");
 
     if (!req.params.id)
         next(HttpError(400, { message: 'no parameter found' }));
@@ -28,7 +28,7 @@ const getMovieById = (req, res, next) => {
 }
 
 const removeMovie = (req, res, next) => {
-    console.log("---> moviesController::removeMovie");
+    console.log("---> EX:moviesController::removeMovie");
 
     if (!req.params.id)
         next(HttpError(400, { message: 'no parameter found' }));
@@ -45,7 +45,7 @@ const removeMovie = (req, res, next) => {
 }
 
 const createMovie = (req, res, next) => {
-    console.log(`---> moviesController::createMovie`);
+    console.log(`---> EX:moviesController::createMovie`);
 
     if (!req.body)
         next(HttpError(400, { message: 'Ups! parametro de entrada incorrecto' }));
@@ -62,7 +62,7 @@ const createMovie = (req, res, next) => {
 }
 
 const updateMovie = (req, res, next) => {
-    console.log(`---> moviesController::updateMovie`);
+    console.log(`---> EX:moviesController::updateMovie`);
 
 
     try {
@@ -79,7 +79,7 @@ const updateMovie = (req, res, next) => {
 
 
 const getMovieBy = (req, res, next) => {
-    console.log(`---> moviesController::getMovieBy`);
+    console.log(`---> EX:moviesController::getMovieBy`);
 
     if (!req.body)
         next(HttpError(400, { message: 'Ups! parametro de entarada incorrecto' }));
@@ -90,7 +90,7 @@ const getMovieBy = (req, res, next) => {
 
 //TODO: Actuaizar API
 const addActors = (req, res, next) => {
-    console.log(`---> moviesController::addActors`);
+    console.log(`---> EX:moviesController::addActors`);
     if (!req.body)
         next(HttpError(400, { message: 'no parameter found' }));
 
@@ -101,7 +101,7 @@ const addActors = (req, res, next) => {
 
 // TODO: Nueva API devuelve todas las películas donde participa un actor
 const getMoviesFromActor = (req, res, next) => {
-    console.log(`---> moviesController::getMoviesFromActor`);
+    console.log(`---> EX:moviesController::getMoviesFromActor`);
 
     if (!req.body)
         next(HttpError(400, { message: 'Ups! parametro de entarada incorrecgetMovieByto' }));
